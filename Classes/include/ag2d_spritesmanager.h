@@ -16,11 +16,11 @@ namespace ag2d
 	public:
 		//////////////////////////////////////////////////////
 		//¼ì²é
-		void validate(){};
+		void validate();
 
-		void drawToStage(CCLayer* stage_layer){};
+		void drawToStage(CCLayer* stage_layer);
 
-		void updateToStage(CCLayer* stage_layer){};
+		void updateToStage(CCLayer* stage_layer);
 	};
 };
 #endif

@@ -6,11 +6,11 @@ namespace ag2d
 	class Ag2dActionSystem
 	{
 	public:
-
 		///////////////////////////////////////////////
-		void validate(){};
+
+		void validate();
 		//是否发生动作
-		bool isCrashAction(){ return false;};
+		bool isCrashAction();
 	};
 };
 

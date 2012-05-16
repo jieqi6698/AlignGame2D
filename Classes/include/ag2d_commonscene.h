@@ -12,13 +12,7 @@ namespace ag2d
 	class Ag2dCommonScene : public Ag2dScene
 	{
 	private:
-		//背景层对象指针
-		CCLayer* m_bg_layer;
-		//窗口层对象指针
-		CCLayer* m_wnd_layer;
-		//精灵舞台怪
-		CCLayer* m_stage_layer;
-
+		/////////////////////// status ///////////////////////////////
 		//背景层标识
 		static const int BG_LAYER_TAG = 0xA06E0;
 		//背景层Z-Order
@@ -34,8 +28,21 @@ namespace ag2d
 		//窗口层Z-Order
 		static const int WINDOWS_LAYER_Z_ORDER = 2;
 
+	private:
+		/////////////////////// layers ///////////////////////////////
+		//背景层对象指针
+		CCLayer* m_bg_layer;
+		//窗口层对象指针
+		CCLayer* m_wnd_layer;
+		//精灵舞台怪
+		CCLayer* m_stage_layer;
+
+
 	protected:
+		/////////////////////// module ///////////////////////////////
+		//动作系统
 		Ag2dActionSystem* m_action_system;
+		//精灵管理器
 		Ag2dSpritesManager* m_sprites_manager;
 
 	public:
@@ -63,14 +70,20 @@ namespace ag2d
 		//定时回调
 		void updateCallback(ccTime time);
 
+		//回调更新舞台
 		void updateStageCallback(ccTime time);
 
+	protected:
+		//更新背景
 		virtual void updateBackgroundLayer(CCLayer* bg_layer)=0;
 
+		//更新窗口层
 		virtual void updateWindowsLayer(CCLayer* wnd_layer)=0;
 		
+		//绘制背景层
 		virtual void drawToBackgroundLayer(CCLayer* bg_layer)=0;
 
+		//绘制窗口层
 		virtual void drawToWindowsLayer(CCLayer* wnd_layer)=0;
 
 
