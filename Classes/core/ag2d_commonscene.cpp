@@ -19,11 +19,12 @@ Ag2dCommonScene::~Ag2dCommonScene()
 ////场景内所有可显示元素，在此函数中绘制。
 void Ag2dCommonScene::draw(CCScene* display_scene)
 {
-	//两个层都是以左下角为直角坐标系原点，
+	//两个层都是以左下角为直角坐标系原点
 	m_bg_layer = CCLayer::node();
 	m_wnd_layer = CCLayer::node();
-	//背景层不接收触摸处理
 	m_bg_layer->setIsTouchEnabled(false);
+	display_scene->addChild(m_bg_layer,BG_LAYER_TAG,BG_LAYER_Z_ORDER);
+	display_scene->addChild(m_wnd_layer,WINDOWS_LAYER_TAG,WINDOWS_LAYER_Z_ORDER);
 	drawToBackgroundLayer(m_bg_layer);
 	drawToWindowsLayer(m_wnd_layer);
 	this->schedule(schedule_selector(Ag2dCommonScene::updateCallback),0.1f);

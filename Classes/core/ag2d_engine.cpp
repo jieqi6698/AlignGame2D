@@ -44,6 +44,7 @@ void Ag2dEngine::playScene(Ag2dScene* scene)
 	CCSize size = CCDirector::sharedDirector()->getWinSize();
 	scene->initMeasure(size.width,size.height);
 	scene->initial();
+	
 	CCScene* display = scene->createDisplay();
 	if(NULL != m_running_scene)
 	{
@@ -52,6 +53,7 @@ void Ag2dEngine::playScene(Ag2dScene* scene)
 		CCDirector::sharedDirector()->replaceScene(fade);
 	}else
 	{
+		CCLOG(">>>>>>>> runWithScene >>>>>");
 		CCDirector::sharedDirector()->runWithScene(display);
 	}
 	scene->didDisplayed();

@@ -50,6 +50,9 @@
     <None Include="Resources\HelloWorld.png">
       <Filter>resource</Filter>
     </None>
+    <None Include="Resources\background.jpg">
+      <Filter>resource</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="win32\AlignGame2D.rc">
@@ -135,6 +138,9 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Classes\core\ag2d_launcher.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\core\ag2d_commonscene.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>

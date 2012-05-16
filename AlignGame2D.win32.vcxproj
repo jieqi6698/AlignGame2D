@@ -123,6 +123,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="Resources\app.icf" />
+    <None Include="Resources\background.jpg" />
     <None Include="Resources\background.mp3" />
     <None Include="Resources\crop.png" />
     <None Include="Resources\Default.png" />
@@ -165,6 +166,7 @@
     <ClCompile Include="Classes\cocos2dx_support\LuaCocos2d.cpp" />
     <ClCompile Include="Classes\cocos2dx_support\tolua_fix.c" />
     <ClCompile Include="Classes\core\ag2d_actionsystem.cpp" />
+    <ClCompile Include="Classes\core\ag2d_commonscene.cpp" />
     <ClCompile Include="Classes\core\ag2d_engine.cpp" />
     <ClCompile Include="Classes\core\ag2d_launcher.cpp" />
     <ClCompile Include="Classes\core\ag2d_scene.cpp" />
