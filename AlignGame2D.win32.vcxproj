@@ -122,8 +122,6 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
     <None Include="Resources\app.icf" />
     <None Include="Resources\background.mp3" />
     <None Include="Resources\crop.png" />
@@ -151,18 +149,12 @@
     <ClInclude Include="Classes\cocos2dx_support\tolua_fix.h" />
     <ClInclude Include="Classes\GameScene.h" />
     <ClInclude Include="Classes\include\ag2d_actionsystem.h" />
-    <ClInclude Include="Classes\include\ag2d_channel.h" />
     <ClInclude Include="Classes\include\ag2d_commonscene.h" />
     <ClInclude Include="Classes\include\ag2d_config.h" />
     <ClInclude Include="Classes\include\ag2d_engine.h" />
-    <ClInclude Include="Classes\include\ag2d_game.h" />
     <ClInclude Include="Classes\include\ag2d_launcher.h" />
     <ClInclude Include="Classes\include\ag2d_scene.h" />
-    <ClInclude Include="Classes\include\ag2d_sceneconf.h" />
-    <ClInclude Include="Classes\include\ag2d_spritenode.h" />
-    <ClInclude Include="Classes\include\ag2d_spritenodedata.h" />
     <ClInclude Include="Classes\include\ag2d_spritesmanager.h" />
-    <ClInclude Include="Classes\include\ag2d_spritestatus.h" />
     <ClInclude Include="win32\main.h" />
     <ClInclude Include="win32\resource.h" />
   </ItemGroup>
@@ -174,7 +166,6 @@
     <ClCompile Include="Classes\cocos2dx_support\tolua_fix.c" />
     <ClCompile Include="Classes\core\ag2d_actionsystem.cpp" />
     <ClCompile Include="Classes\core\ag2d_engine.cpp" />
-    <ClCompile Include="Classes\core\ag2d_game.cpp" />
     <ClCompile Include="Classes\core\ag2d_launcher.cpp" />
     <ClCompile Include="Classes\core\ag2d_scene.cpp" />
     <ClCompile Include="Classes\core\ag2d_spritesmanager.cpp" />

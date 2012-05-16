@@ -6,7 +6,6 @@
 #include "CCLuaEngine.h"
 
 #include "ag2d_scene.h"
-#include "ag2d_channel.h"
 #include "ag2d_spritesmanager.h"
 #include "ag2d_actionsystem.h"
 

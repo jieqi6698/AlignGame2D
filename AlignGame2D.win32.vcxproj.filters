@@ -50,8 +50,6 @@
     <None Include="Resources\HelloWorld.png">
       <Filter>resource</Filter>
     </None>
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="win32\AlignGame2D.rc">
@@ -80,25 +78,13 @@
     <ClInclude Include="Classes\cocos2dx_support\tolua_fix.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="Classes\include\ag2d_channel.h">
-      <Filter>include</Filter>
-    </ClInclude>
     <ClInclude Include="Classes\include\ag2d_config.h">
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="Classes\include\ag2d_engine.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="Classes\include\ag2d_game.h">
-      <Filter>include</Filter>
-    </ClInclude>
     <ClInclude Include="Classes\include\ag2d_scene.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\include\ag2d_spritenode.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\include\ag2d_spritenodedata.h">
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="Classes\include\ag2d_spritesmanager.h">
@@ -107,13 +93,7 @@
     <ClInclude Include="Classes\GameScene.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="Classes\include\ag2d_sceneconf.h">
-      <Filter>include</Filter>
-    </ClInclude>
     <ClInclude Include="Classes\include\ag2d_actionsystem.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\include\ag2d_spritestatus.h">
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="Classes\include\ag2d_launcher.h">
@@ -143,9 +123,6 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Classes\core\ag2d_engine.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\core\ag2d_game.cpp">
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Classes\core\ag2d_scene.cpp">
