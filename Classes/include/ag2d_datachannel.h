@@ -16,7 +16,7 @@ namespace ag2d
 
 	public:
 
-		list<Ag2dSpriteNode*> getNewSprites()
+		list<Ag2dSpriteNode*> loadTotalSprites()
 		{
 			list<Ag2dSpriteNode*> list;
 			for(int i=0;i<10;i++)

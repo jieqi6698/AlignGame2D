@@ -13,9 +13,13 @@ namespace ag2d
 	 *****************************************/
 	class Ag2dSpritesManager
 	{
-	public:
-		//////////////////////////////////////////////////////
+	private:
+		CCMutableArray<CCSprite*> * m_sprites_cache;
 
+	public:
+		
+		Ag2dSpritesManager();
+		~Ag2dSpritesManager();
 		/*
 			将数据通道中的精灵绘制到舞台中。这个函数被调用一次。
 		*/

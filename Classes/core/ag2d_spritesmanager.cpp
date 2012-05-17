@@ -5,18 +5,27 @@
 
 using namespace ag2d;
 
-//////////////////////////////////////////////////////
+Ag2dSpritesManager::Ag2dSpritesManager()
+{
+	m_sprites_cache = new CCMutableArray<CCSprite*>;
+}
+
+Ag2dSpritesManager::~Ag2dSpritesManager()
+{
+	delete m_sprites_cache;
+}
 
 void Ag2dSpritesManager::drawToStage(CCLayer* stage_layer)
 {
 	//从数据通道中取出新创建的精灵数据，把它绘制到舞台中
-	list<Ag2dSpriteNode*>& target_array = Ag2dLauncher::sharedDataChannel().getNewSprites();
+	list<Ag2dSpriteNode*>& target_array = Ag2dLauncher::sharedDataChannel().loadTotalSprites();
 	list<Ag2dSpriteNode*>::iterator it;
 	for (it = target_array.begin(); it != target_array.end(); it++)
 	{
 		Ag2dSpriteNode* node = *it;
 		CCSprite* sprite = createSprite(node->ResFile,node->Type);
 		sprite->setPosition(ccp(node->CoreNode.pos_x,node->CoreNode.pos_y));
+		m_sprites_cache->addObject(sprite);
 		stage_layer->addChild(sprite,node->CoreNode.zOrder,node->CoreNode.tag);
 	}//end for
 }
