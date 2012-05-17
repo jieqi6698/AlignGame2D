@@ -29,6 +29,12 @@ namespace ag2d
 		//引擎流程被切换到此场景，引擎首先调用此函数对场景进行初始化。此时，场景还没有被显示。
 		virtual void initial() = 0;
 
+		//场景已经被引擎调度到显示窗口中显示，此函数被调用
+		virtual void didDisplayed()=0;
+
+		//引擎流程被调离此场景，场景即将被销毁，此函数被调用。
+		virtual void toDestory()=0;
+
 		////场景被引擎渲染到显示窗口中。
 		CCScene* createDisplay();
 
@@ -45,13 +51,8 @@ namespace ag2d
 		virtual void draw(CCScene* display_scene)=0;
 
 		//在每一帧中回调
-		virtual void scheduleOnFrame(ccTime timc)=0;
+		virtual void scheduleOnPerFrame(ccTime timc)=0;
 
-		//场景已经被引擎调度到显示窗口中显示，此函数被调用
-		virtual void didDisplayed()=0;
-
-		//引擎流程被调离此场景，场景即将被销毁，此函数被调用。
-		virtual void toDestory()=0;
 	};
 };
 

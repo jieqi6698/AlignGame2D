@@ -49,6 +49,11 @@ namespace ag2d
 		//引擎流程被切换到此场景，引擎首先调用此函数对场景进行初始化。此时，场景还没有被显示。
 		void initial();
 
+		//场景已经被引擎调度到显示窗口中显示，此函数被调用
+		void didDisplayed();
+
+		//引擎流程被调离此场景，场景即将被销毁，此函数被调用。
+		void toDestory();
 		//构造函数，必须标识这个场景的流程码
 		Ag2dCommonScene(FlowCode code);
 
@@ -59,16 +64,10 @@ namespace ag2d
 		void draw(CCScene* display_scene);
 
 		//在每一帧中回调
-		void scheduleOnFrame(ccTime timc);
-
-		//场景已经被引擎调度到显示窗口中显示，此函数被调用
-		void didDisplayed();
-
-		//引擎流程被调离此场景，场景即将被销毁，此函数被调用。
-		void toDestory();
+		void scheduleOnPerFrame(ccTime timc);
 
 		//定时回调
-		void updateCallback(ccTime time);
+		void scheduleCallback(ccTime time);
 
 	protected:
 		//更新背景

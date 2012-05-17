@@ -9,9 +9,8 @@ using namespace ag2d;
 
 void Ag2dSpritesManager::drawToStage(CCLayer* stage_layer)
 {
-	CCLOG(">>>> drawToStage ....");
 	//从数据通道中取出新创建的精灵数据，把它绘制到舞台中
-	list<Ag2dSpriteNode*> target_array = Ag2dLauncher::sharedDataChannel()->getNewSprites();
+	list<Ag2dSpriteNode*>& target_array = Ag2dLauncher::sharedDataChannel().getNewSprites();
 	list<Ag2dSpriteNode*>::iterator it;
 	for (it = target_array.begin(); it != target_array.end(); it++)
 	{

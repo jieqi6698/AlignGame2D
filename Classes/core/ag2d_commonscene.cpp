@@ -5,11 +5,16 @@ using namespace ag2d;
 //引擎流程被切换到此场景，引擎首先调用此函数对场景进行初始化。此时，场景还没有被显示。
 void Ag2dCommonScene::initial()
 {
-	m_action_system = Ag2dLauncher::sharedActionSystem();
+	m_action_system = &Ag2dLauncher::sharedActionSystem();
+	m_sprites_manager = &Ag2dLauncher::sharedSpritesManager();
 };
 
 //构造函数，必须标识这个场景的流程码
-Ag2dCommonScene::Ag2dCommonScene(FlowCode code):Ag2dScene(code){};
+Ag2dCommonScene::Ag2dCommonScene(FlowCode code)
+	:Ag2dScene(code)
+{
+
+};
 
 //析构函数
 Ag2dCommonScene::~Ag2dCommonScene()
@@ -27,11 +32,11 @@ void Ag2dCommonScene::draw(CCScene* display_scene)
 	display_scene->addChild(m_wnd_layer,WINDOWS_LAYER_TAG,WINDOWS_LAYER_Z_ORDER);
 	drawToBackgroundLayer(m_bg_layer);
 	drawToWindowsLayer(m_wnd_layer);
-	this->schedule(schedule_selector(Ag2dCommonScene::updateCallback),0.1f);
+	this->schedule(schedule_selector(Ag2dCommonScene::scheduleCallback),0.1f);
 };
 
 //在每一帧中回调
-void Ag2dCommonScene::scheduleOnFrame(ccTime timc)
+void Ag2dCommonScene::scheduleOnPerFrame(ccTime timc)
 {
 	if(m_action_system->isAction())
 	{
@@ -54,7 +59,7 @@ void Ag2dCommonScene::toDestory()
 };
 
 //定时回调
-void Ag2dCommonScene::updateCallback(ccTime time)
+void Ag2dCommonScene::scheduleCallback(ccTime time)
 {
 	updateBackgroundLayer(m_bg_layer);
 	updateWindowsLayer(m_wnd_layer);

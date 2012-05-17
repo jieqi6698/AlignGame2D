@@ -15,7 +15,7 @@ AppDelegate::AppDelegate()
 	//启动器初始化
 	Ag2dLauncher::init();
 	//注册场景
-	Ag2dLauncher::sharedEngine().registerScene(new GameScene(99));;
+	Ag2dLauncher::sharedEngine().registerScene(new GameScene(99));
 }
 
 AppDelegate::~AppDelegate()

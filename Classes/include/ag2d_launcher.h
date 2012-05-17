@@ -31,10 +31,10 @@ namespace ag2d
 		static Ag2dSpritesManager& sharedSpritesManager();
 
 		//动作系统
-		static Ag2dActionSystem* sharedActionSystem();
+		static Ag2dActionSystem& sharedActionSystem();
 
 		//数据通道
-		static Ag2dDataChannel* sharedDataChannel();
+		static Ag2dDataChannel& sharedDataChannel();
 	};
 };
 

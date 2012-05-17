@@ -27,6 +27,6 @@ CCScene* Ag2dScene::createDisplay()
 	m_display_scene = CCScene::node();
 	m_display_scene->addChild(this);
 	draw(m_display_scene);
-	this->schedule(schedule_selector(Ag2dScene::scheduleOnFrame));
+	this->schedule(schedule_selector(Ag2dScene::scheduleOnPerFrame));
 	return m_display_scene;
 }

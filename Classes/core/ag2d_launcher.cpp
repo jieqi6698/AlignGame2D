@@ -32,13 +32,13 @@ Ag2dSpritesManager& Ag2dLauncher::sharedSpritesManager()
 }
 
 //动作系统
-Ag2dActionSystem* Ag2dLauncher::sharedActionSystem()
+Ag2dActionSystem& Ag2dLauncher::sharedActionSystem()
 {
-	return m_action_system;
+	return * m_action_system;
 }
 
 //数据通道
-Ag2dDataChannel* Ag2dLauncher::sharedDataChannel()
+Ag2dDataChannel& Ag2dLauncher::sharedDataChannel()
 {
-	return m_data_channel;
+	return * m_data_channel;
 }
