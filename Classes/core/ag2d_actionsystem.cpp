@@ -2,13 +2,9 @@
 
 using namespace ag2d;
 
-void Ag2dActionSystem::validate()
+//如果检测到精灵发生动作，返回真
+bool Ag2dActionSystem::isAction()
 {
 
-}
-
-//是否发生动作
-bool Ag2dActionSystem::isCrashAction()
-{
 	return false;
 }

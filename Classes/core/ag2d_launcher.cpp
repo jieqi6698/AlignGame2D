@@ -5,6 +5,7 @@ using namespace ag2d;
 Ag2dEngine* Ag2dLauncher::m_engine = NULL;
 Ag2dSpritesManager* Ag2dLauncher::m_sprites_manager = NULL;
 Ag2dActionSystem* Ag2dLauncher::m_action_system = NULL;
+Ag2dDataChannel* Ag2dLauncher::m_data_channel = NULL;
 
 void Ag2dLauncher::init()
 {
@@ -34,4 +35,10 @@ Ag2dSpritesManager& Ag2dLauncher::sharedSpritesManager()
 Ag2dActionSystem* Ag2dLauncher::sharedActionSystem()
 {
 	return m_action_system;
+}
+
+//数据通道
+Ag2dDataChannel* Ag2dLauncher::sharedDataChannel()
+{
+	return m_data_channel;
 }

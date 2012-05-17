@@ -70,9 +70,6 @@ namespace ag2d
 		//定时回调
 		void updateCallback(ccTime time);
 
-		//回调更新舞台
-		void updateStageCallback(ccTime time);
-
 	protected:
 		//更新背景
 		virtual void updateBackgroundLayer(CCLayer* bg_layer)=0;

@@ -152,10 +152,15 @@
     <ClInclude Include="Classes\include\ag2d_actionsystem.h" />
     <ClInclude Include="Classes\include\ag2d_commonscene.h" />
     <ClInclude Include="Classes\include\ag2d_config.h" />
+    <ClInclude Include="Classes\include\ag2d_corenode.h" />
+    <ClInclude Include="Classes\include\ag2d_datachannel.h" />
     <ClInclude Include="Classes\include\ag2d_engine.h" />
     <ClInclude Include="Classes\include\ag2d_launcher.h" />
+    <ClInclude Include="Classes\include\ag2d_nodestatus.h" />
     <ClInclude Include="Classes\include\ag2d_scene.h" />
+    <ClInclude Include="Classes\include\ag2d_spritenode.h" />
     <ClInclude Include="Classes\include\ag2d_spritesmanager.h" />
+    <ClInclude Include="Classes\include\ag2d_spritetype.h" />
     <ClInclude Include="win32\main.h" />
     <ClInclude Include="win32\resource.h" />
   </ItemGroup>
@@ -167,6 +172,8 @@
     <ClCompile Include="Classes\cocos2dx_support\tolua_fix.c" />
     <ClCompile Include="Classes\core\ag2d_actionsystem.cpp" />
     <ClCompile Include="Classes\core\ag2d_commonscene.cpp" />
+    <ClCompile Include="Classes\core\ag2d_corenode.cpp" />
+    <ClCompile Include="Classes\core\ag2d_datachannel.cpp" />
     <ClCompile Include="Classes\core\ag2d_engine.cpp" />
     <ClCompile Include="Classes\core\ag2d_launcher.cpp" />
     <ClCompile Include="Classes\core\ag2d_scene.cpp" />

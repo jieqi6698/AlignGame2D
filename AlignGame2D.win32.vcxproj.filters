@@ -105,6 +105,21 @@
     <ClInclude Include="Classes\include\ag2d_commonscene.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="Classes\include\ag2d_datachannel.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\include\ag2d_corenode.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\include\ag2d_nodestatus.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\include\ag2d_spritenode.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\include\ag2d_spritetype.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="win32\main.cpp">
@@ -141,6 +156,12 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Classes\core\ag2d_commonscene.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\core\ag2d_datachannel.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\core\ag2d_corenode.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>

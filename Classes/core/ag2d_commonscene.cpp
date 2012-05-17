@@ -33,9 +33,10 @@ void Ag2dCommonScene::draw(CCScene* display_scene)
 //在每一帧中回调
 void Ag2dCommonScene::scheduleOnFrame(ccTime timc)
 {
-	//调度动作系统、精灵管理器检验
-	m_action_system->validate();
-	m_sprites_manager->validate();
+	if(m_action_system->isAction())
+	{
+		m_sprites_manager->updateToStage(m_stage_layer);
+	}
 };
 
 //场景已经被引擎调度到显示窗口中显示，此函数被调用
@@ -44,7 +45,6 @@ void Ag2dCommonScene::didDisplayed()
 	m_stage_layer = CCLayer::node();
 	m_display_scene->addChild(m_stage_layer,STAGE_LAYER_TAG,STAGE_LAYER_Z_ORDER);
 	m_sprites_manager->drawToStage(m_stage_layer);
-	this->schedule(schedule_selector(Ag2dCommonScene::updateStageCallback));
 };
 
 //引擎流程被调离此场景，场景即将被销毁，此函数被调用。
@@ -59,11 +59,3 @@ void Ag2dCommonScene::updateCallback(ccTime time)
 	updateBackgroundLayer(m_bg_layer);
 	updateWindowsLayer(m_wnd_layer);
 };
-
-void Ag2dCommonScene::updateStageCallback(ccTime time)
-{
-	if(m_action_system->isCrashAction())
-	{
-		m_sprites_manager->updateToStage(m_stage_layer);
-	}
-}

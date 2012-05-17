@@ -8,9 +8,8 @@ namespace ag2d
 	public:
 		///////////////////////////////////////////////
 
-		void validate();
 		//是否发生动作
-		bool isCrashAction();
+		bool isAction();
 	};
 };
 
