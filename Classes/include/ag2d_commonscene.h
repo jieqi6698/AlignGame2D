@@ -61,7 +61,7 @@ namespace ag2d
 		virtual ~Ag2dCommonScene();
 
 		////场景内所有可显示元素，在此函数中绘制。
-		void draw(CCScene* display_scene);
+		void draw(CCScene& display_scene);
 
 		//在每一帧中回调
 		void scheduleOnPerFrame(ccTime timc);
@@ -71,16 +71,16 @@ namespace ag2d
 
 	protected:
 		//更新背景
-		virtual void updateBackgroundLayer(CCLayer* bg_layer)=0;
+		virtual void updateBackgroundLayer(CCLayer& bg_layer)=0;
 
 		//更新窗口层
-		virtual void updateWindowsLayer(CCLayer* wnd_layer)=0;
+		virtual void updateWindowsLayer(CCLayer& wnd_layer)=0;
 		
 		//绘制背景层
-		virtual void drawToBackgroundLayer(CCLayer* bg_layer)=0;
+		virtual void drawToBackgroundLayer(CCLayer& bg_layer)=0;
 
 		//绘制窗口层
-		virtual void drawToWindowsLayer(CCLayer* wnd_layer)=0;
+		virtual void drawToWindowsLayer(CCLayer& wnd_layer)=0;
 
 
 	};

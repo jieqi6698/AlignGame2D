@@ -48,7 +48,7 @@ namespace ag2d
 		virtual ~Ag2dScene();
 
 		////场景内所有可显示元素，在此函数中绘制。
-		virtual void draw(CCScene* display_scene)=0;
+		virtual void draw(CCScene& display_scene)=0;
 
 		//在每一帧中回调
 		virtual void scheduleOnPerFrame(ccTime timc)=0;

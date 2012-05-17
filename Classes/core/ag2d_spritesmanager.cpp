@@ -15,7 +15,7 @@ Ag2dSpritesManager::~Ag2dSpritesManager()
 	delete m_sprites_cache;
 }
 
-void Ag2dSpritesManager::drawToStage(CCLayer* stage_layer)
+void Ag2dSpritesManager::drawToStage(CCLayer& stage_layer)
 {
 	//从数据通道中取出新创建的精灵数据，把它绘制到舞台中
 	list<Ag2dSpriteNode*>& target_array = Ag2dLauncher::sharedDataChannel().loadTotalSprites();
@@ -26,7 +26,7 @@ void Ag2dSpritesManager::drawToStage(CCLayer* stage_layer)
 		CCSprite* sprite = createSprite(node->ResFile,node->Type);
 		sprite->setPosition(ccp(node->CoreNode.pos_x,node->CoreNode.pos_y));
 		m_sprites_cache->addObject(sprite);
-		stage_layer->addChild(sprite,node->CoreNode.zOrder,node->CoreNode.tag);
+		stage_layer.addChild(sprite,node->CoreNode.zOrder,node->CoreNode.tag);
 	}//end for
 }
 
@@ -48,7 +48,7 @@ CCSprite* Ag2dSpritesManager::createSprite(char* resFile,Ag2dSpriteType type)
 	return sprite;
 }
 
-void Ag2dSpritesManager::updateToStage(CCLayer* stage_layer)
+void Ag2dSpritesManager::updateToStage(CCLayer& stage_layer)
 {
 
 }
