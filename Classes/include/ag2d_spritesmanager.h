@@ -14,6 +14,7 @@ namespace ag2d
 	class Ag2dSpritesManager
 	{
 	private:
+		//场景中所有精灵的缓存
 		CCMutableArray<CCSprite*> * m_sprites_cache;
 
 	public:

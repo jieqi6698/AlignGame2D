@@ -6,5 +6,5 @@ using namespace ag2d;
 bool Ag2dActionSystem::isAction()
 {
 
-	return false;
+	return true;
 }

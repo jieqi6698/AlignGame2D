@@ -25,8 +25,9 @@ void Ag2dSpritesManager::drawToStage(CCLayer& stage_layer)
 		Ag2dSpriteNode* node = *it;
 		CCSprite* sprite = createSprite(node->ResFile,node->Type);
 		sprite->setPosition(ccp(node->CoreNode.pos_x,node->CoreNode.pos_y));
+		sprite->setTag(node->CoreNode.tag);
 		m_sprites_cache->addObject(sprite);
-		stage_layer.addChild(sprite,node->CoreNode.zOrder,node->CoreNode.tag);
+		stage_layer.addChild(sprite,node->CoreNode.zOrder);
 	}//end for
 }
 
@@ -50,5 +51,14 @@ CCSprite* Ag2dSpritesManager::createSprite(char* resFile,Ag2dSpriteType type)
 
 void Ag2dSpritesManager::updateToStage(CCLayer& stage_layer)
 {
-
+	CCMutableArray<CCSprite*>::CCMutableArrayIterator it;
+	for (it = m_sprites_cache->begin(); it != m_sprites_cache->end(); it++)
+	{
+		CCSprite* sprite = *it;
+		float x = sprite->getPositionX();
+		float y = sprite->getPositionY();
+		x += -1;
+		y += -1;
+		sprite->setPosition(ccp(x,y));
+	}
 }
