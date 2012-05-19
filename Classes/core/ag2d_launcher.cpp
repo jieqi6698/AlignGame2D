@@ -9,6 +9,11 @@ Ag2dDataChannel* Ag2dLauncher::m_data_channel = NULL;
 
 void Ag2dLauncher::init()
 {
+	//检测配置文件。此文件被创建在生成目录中，而不是在resources中。
+	if( "ChenYongJia" == CCUserDefault::sharedUserDefault()->getStringForKey("Author","ChenYongJia"))
+	{
+		CCUserDefault::sharedUserDefault()->setStringForKey("Author", "chenyoca");
+	}
 	m_engine = new Ag2dEngine();
 	m_sprites_manager = new Ag2dSpritesManager();
 	m_action_system = new Ag2dActionSystem();

@@ -21,8 +21,8 @@ namespace ag2d
 			list<Ag2dSpriteNode*> list;
 			for(int i=0;i<10;i++)
 			{
-				Ag2dSpriteNode* node = new Ag2dSpriteNode(i,i * 50.0f,i * 100.0f);
-				node->ResFile = "dog.png";
+				Ag2dSpriteNode* node = new Ag2dSpriteNode(i,450.0f, i * 50.0f);
+				node->ResFile = "froggy.png";
 				list.push_back(node);
 			}
 			return list;

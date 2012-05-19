@@ -53,7 +53,6 @@ void Ag2dEngine::playScene(Ag2dScene* scene)
 		CCDirector::sharedDirector()->replaceScene(fade);
 	}else
 	{
-		CCLOG(">>>>>>>> runWithScene >>>>>");
 		CCDirector::sharedDirector()->runWithScene(display);
 	}
 	scene->didDisplayed();
@@ -69,7 +68,7 @@ void Ag2dEngine::registerScene(Ag2dScene* scene)
 //ÔİÍ£ÒıÇæ
 void Ag2dEngine::pause()
 {
-	 SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
+	SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
 	CCDirector::sharedDirector()->pause();
 }
 

@@ -58,7 +58,7 @@ void Ag2dSpritesManager::updateToStage(CCLayer& stage_layer)
 		float x = sprite->getPositionX();
 		float y = sprite->getPositionY();
 		x += -1;
-		y += -1;
+		//y += -1;
 		sprite->setPosition(ccp(x,y));
 	}
 }

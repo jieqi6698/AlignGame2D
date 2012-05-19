@@ -8,6 +8,7 @@
 
 namespace ag2d
 {
+	
 	class Ag2dLauncher
 	{
 	private:
@@ -21,8 +22,13 @@ namespace ag2d
 		static Ag2dDataChannel* m_data_channel;
 
 	public:
+		//对各个模块进行初始化
 		static void init();
+
+		//销毁模块数据
 		static void destory();
+
+		// * 返回一个对象的引用，而非一个对象副本。
 
 		//引擎
 		static Ag2dEngine& sharedEngine();

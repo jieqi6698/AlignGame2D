@@ -130,11 +130,13 @@
     <None Include="Resources\dog.png" />
     <None Include="Resources\effect1.wav" />
     <None Include="Resources\farm.jpg" />
+    <None Include="Resources\froggy.png" />
     <None Include="Resources\hello.lua" />
     <None Include="Resources\hello2.lua" />
     <None Include="Resources\HelloWorld.png" />
     <None Include="Resources\Icon.png" />
     <None Include="Resources\land.png" />
+    <None Include="Resources\lion.png" />
     <None Include="Resources\menu1.png" />
     <None Include="Resources\menu2.png" />
     <None Include="win32\res\AlignGame2D.ico" />
@@ -161,6 +163,7 @@
     <ClInclude Include="Classes\include\ag2d_spritenode.h" />
     <ClInclude Include="Classes\include\ag2d_spritesmanager.h" />
     <ClInclude Include="Classes\include\ag2d_spritetype.h" />
+    <ClInclude Include="Classes\common\ag2d_splashscene.h" />
     <ClInclude Include="win32\main.h" />
     <ClInclude Include="win32\resource.h" />
   </ItemGroup>
@@ -178,6 +181,7 @@
     <ClCompile Include="Classes\core\ag2d_launcher.cpp" />
     <ClCompile Include="Classes\core\ag2d_scene.cpp" />
     <ClCompile Include="Classes\core\ag2d_spritesmanager.cpp" />
+    <ClCompile Include="Classes\ui\ag2d_splashscene.cpp" />
     <ClCompile Include="win32\main.cpp" />
   </ItemGroup>
   <ItemGroup>

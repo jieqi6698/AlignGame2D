@@ -53,6 +53,12 @@
     <None Include="Resources\background.jpg">
       <Filter>resource</Filter>
     </None>
+    <None Include="Resources\froggy.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resources\lion.png">
+      <Filter>resource</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="win32\AlignGame2D.rc">
@@ -120,6 +126,9 @@
     <ClInclude Include="Classes\include\ag2d_spritetype.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="Classes\common\ag2d_splashscene.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="win32\main.cpp">
@@ -162,6 +171,9 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Classes\core\ag2d_corenode.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\ui\ag2d_splashscene.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>
