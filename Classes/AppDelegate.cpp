@@ -6,6 +6,7 @@
 
 #include "include\ag2d_launcher.h"
 #include "GameScene.h"
+#include "common\ag2d_splashscene.h"
 
 USING_NS_CC;
 using namespace ag2d;
@@ -15,7 +16,10 @@ AppDelegate::AppDelegate()
 	//启动器初始化
 	Ag2dLauncher::init();
 	//注册场景
-	Ag2dLauncher::sharedEngine().registerScene(new GameScene(99));
+	//Ag2dLauncher::sharedEngine().registerScene(new GameScene(99));
+	Ag2dSplashScene* splash = new Ag2dSplashScene(0,"background.jpg");
+	splash->setLoadingIcon("lion.png");
+	Ag2dLauncher::sharedEngine().registerScene(splash);
 }
 
 AppDelegate::~AppDelegate()

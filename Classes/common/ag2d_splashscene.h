@@ -7,26 +7,42 @@
 using namespace std;
 namespace ag2d
 {
-	
+	class Ag2dSplashListener
+	{
+	public:
+		virtual void onLoading()=0;
+		virtual ~Ag2dSplashListener()=0;
+	};
+
+	//具备启动界面功能的场景类
 	class Ag2dSplashScene : public Ag2dCommonScene
 	{
 	private:
-		list<char*> * m_splash_list;
-		int m_splash_index;
+		//启动界面的图片
+		char* m_splash_image;
+
+		//加载过程显示的图片
+
+		char* m_loading_icon;
+
+		//回调接口
+		Ag2dSplashListener* m_listener;
 
 	public:
-		Ag2dSplashScene(FlowCode code);
+		Ag2dSplashScene(FlowCode code,char* splash);
 
-		void setSplashRes(char* splash);
+		//
+		void setLoadingListener(Ag2dSplashListener& listener);
 
-		void splashCallback(ccTime timc);
+		void setLoadingIcon(char* load_icon);
+
 	private:
-		void updateBackgroundLayer(CCLayer& bg_layer);
-
-		void updateWindowsLayer(CCLayer& wnd_layer);
 		
-		void drawToBackgroundLayer(CCLayer& bg_layer);
+		void splashCallback(CCObject* sender);
 
+		void updateBackgroundLayer(CCLayer& bg_layer);
+		void updateWindowsLayer(CCLayer& wnd_layer);
+		void drawToBackgroundLayer(CCLayer& bg_layer);
 		void drawToWindowsLayer(CCLayer& wnd_layer);
 	};
 };
