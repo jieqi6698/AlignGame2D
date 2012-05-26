@@ -129,6 +129,12 @@
     <ClInclude Include="Classes\common\ag2d_splashscene.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="Classes\xml\tinystr.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\xml\tinyxml.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="win32\main.cpp">
@@ -174,6 +180,18 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="Classes\ui\ag2d_splashscene.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\xml\tinystr.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\xml\tinyxml.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\xml\tinyxmlerror.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\xml\tinyxmlparser.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>

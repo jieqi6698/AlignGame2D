@@ -164,6 +164,8 @@
     <ClInclude Include="Classes\include\ag2d_spritesmanager.h" />
     <ClInclude Include="Classes\include\ag2d_spritetype.h" />
     <ClInclude Include="Classes\common\ag2d_splashscene.h" />
+    <ClInclude Include="Classes\xml\tinystr.h" />
+    <ClInclude Include="Classes\xml\tinyxml.h" />
     <ClInclude Include="win32\main.h" />
     <ClInclude Include="win32\resource.h" />
   </ItemGroup>
@@ -182,6 +184,10 @@
     <ClCompile Include="Classes\core\ag2d_scene.cpp" />
     <ClCompile Include="Classes\core\ag2d_spritesmanager.cpp" />
     <ClCompile Include="Classes\ui\ag2d_splashscene.cpp" />
+    <ClCompile Include="Classes\xml\tinystr.cpp" />
+    <ClCompile Include="Classes\xml\tinyxml.cpp" />
+    <ClCompile Include="Classes\xml\tinyxmlerror.cpp" />
+    <ClCompile Include="Classes\xml\tinyxmlparser.cpp" />
     <ClCompile Include="win32\main.cpp" />
   </ItemGroup>
   <ItemGroup>
